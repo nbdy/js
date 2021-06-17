@@ -22,8 +22,7 @@ function navigatorCopyToClipboard(data) {
 }
 
 function copyToClipboard(id) {
-    let data = document.getElementById("toxId").value;
-    data = btoa(data);
+    let data = document.getElementById(id).value;
     if(navigator.clipboard && navigatorCopyToClipboard(data) === 0) return 0;
     return legacyCopyToClipboard(id);
 }
